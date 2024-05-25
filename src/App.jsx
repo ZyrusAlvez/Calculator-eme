@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Button from "./component/Button.jsx"
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App () {
+
+  function clicked (){
+    alert("button clicked!")
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+        <Button title="7" onClick={clicked}/>
+        <Button title="8" onClick={clicked}/>
+        <Button title="9" onClick={clicked}/>
+        <Button title="÷" onClick={clicked}/>
+        
+        <Button title="4" onClick={clicked}/>
+        <Button title="5" onClick={clicked}/>
+        <Button title="6" onClick={clicked}/>
+        <Button title="x" onClick={clicked}/>
 
-export default App
+        <Button title="1" onClick={clicked}/>
+        <Button title="2" onClick={clicked}/>
+        <Button title="3" onClick={clicked}/>
+        <Button title="-" onClick={clicked}/>
+
+        <Button title="0" onClick={clicked}/>
+        <Button title="." onClick={clicked}/>
+        <Button title="=" onClick={clicked}/>
+        <Button title="+" onClick={clicked}/>
+    </div>
+  );
+}
