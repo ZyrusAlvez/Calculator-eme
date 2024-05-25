@@ -13,6 +13,10 @@ export default function App () {
     setInput((i) => i.split("").slice(0, i.length - 1).join(""))
   }
 
+  function equal () {
+    setInput((i) => "Miss na kita")
+  }
+
   return (
     <div>
       <nav className="answer-container">
@@ -41,7 +45,7 @@ export default function App () {
           <Button title="+" onClick={() => clicked("+")}/>
         </div>
         <div className="equal-container">
-          <Button title="=" onClick={() => clicked("=")} className="equal"/>
+          <Button title="=" onClick={equal} className="equal"/>
         </div>
       </main>
     </div>
